@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bedford Row Capital</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row justify-content-md-center mb-5">
+        <div class="col-sm formDiv">
+          <form class="row g-3">
+            <div class="row-auto">
+              <label for="productId" class="col-sm-2 col-form-label"
+                >Please Insert An Id :</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="productId"
+                placeholder="Product Id"
+              />
+            </div>
+            <div class="row-auto">
+              <label for="productName" class="col-sm-2 col-form-label"
+                >Please Insert A Name :</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="productName"
+                placeholder="Product Name"
+              />
+            </div>
+            <!-- <div class="col-auto">
+                <label for="productId" class="col-sm-2 col-form-label">Product Id</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="productId"
+                  placeholder="Product Id"
+                />
+              </div> -->
+            <div class="row-auto">
+              <label for="productSold" class="col-sm-2 col-form-label"
+                >Number of Product To Be Sold :</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="productSold"
+                placeholder="Number of Product To Be Sold"
+              />
+            </div>
+            <div class="row-auto">
+              <label for="minPriceRange" class="col-sm-2 col-form-label">
+                Minimum Price Range :
+              </label>
+              <input
+                type="number"
+                class="form-control"
+                id="minPriceRange"
+                placeholder="Minimum Price Range"
+              />
+            </div>
+            <div class="row-auto">
+              <label for="maxPriceRange" class="col-sm-2 col-form-label"
+                >Maximum Price Range :</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="maxPriceRange"
+                placeholder="Maximum Price Range"
+              />
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button type="submit" class="btn btn-success mb-3">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row justify-content-md-center mt-5">
+        <div class="col-sm">
+          <table class="table table-striped table-success table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Created Date</th>
+                <th scope="col">Number of Sold</th>
+                <th scope="col">Min Range</th>
+                <th scope="col">Max Range</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Iphone</td>
+                <td>2021.12.12</td>
+                <td>20</td>
+                <td>2</td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>watch</td>
+                <td>2006.4.9</td>
+                <td>13</td>
+                <td>6</td>
+                <td>90</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Fridge</td>
+                <td>2009.5.6</td>
+                <td>120</td>
+                <td>28</td>
+                <td>290</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
