@@ -6,3 +6,13 @@ body {
   padding: 3rem;
   box-sizing: border-box;
 }
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #295dbe;
+  text-decoration: none;
+  cursor: pointer;
+}
