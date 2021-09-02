@@ -2,24 +2,28 @@
 include 'connect.php';
 
 // Taking all 6 values from the form data(input)
-$id = 999545454;
-$productId =  $_REQUEST['productId'];
-$productName = $_REQUEST['productName'];
-$createdDate =  $_REQUEST['createdDate'];
-$productSold = $_REQUEST['productSold'];
-$minPriceRange = $_REQUEST['minPriceRange'];
-$maxPriceRange = $_REQUEST['maxPriceRange'];
 
+$productId =  $_POST['productId'];
+$productName = $_POST['productName'];
+$productSold = $_POST['productSold'];
+$minPriceRange = $_POST['minPriceRange'];
+$maxPriceRange = $_POST['maxPriceRange'];
+$createdDate =  $_POST['createdDate'];
 
-$inserQuery = "INSERT INTO `products` (`id`, `ProductId`, `ProductName`, `NumberOfProductToBeSold`, `MinimumPriceRange`, `MaximumPriceRage`, `CreatedDate`) 
-VALUES ('$id','$productName','$createdDate','$productSold','$minPriceRange','$maxPriceRange');";
-$executeInsertQuery = $connnect->prepare($inserQuery);
+$inserQuery = "INSERT INTO `products` VALUES (NULL, ?, ?, ?, ?, ?, ?);";
+$executeInsertQuery = $connect->prepare($inserQuery);
+
+$executeInsertQuery->bindValue(1, $productId);
+$executeInsertQuery->bindValue(2, $productName);
+$executeInsertQuery->bindValue(3, $productSold);
+$executeInsertQuery->bindValue(4, $minPriceRange);
+$executeInsertQuery->bindValue(5, $maxPriceRange);
+$executeInsertQuery->bindValue(6, $createdDate);
 $insertResult = $executeInsertQuery->execute();
 
+
 if ($insertResult) {
-    header("location: index.php");
+    header("location: index.php#table");
 } else {
-    header("location: inserProduct.php");
-    echo "ERROR: Hush! Sorry $inserQuery. "
-        . mysqli_error($connect);
+    echo "Has Error :(";
 }
