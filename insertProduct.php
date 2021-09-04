@@ -1,3 +1,5 @@
+<!-- to insert product from Html input to db -->
+
 <?php
 include 'connect.php';
 

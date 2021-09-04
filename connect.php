@@ -1,3 +1,5 @@
+<!-- mySql connection -->
+
 <?php
 
 $host = "localhost";
